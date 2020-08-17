@@ -56,7 +56,7 @@ nav li a:hover {
 }
 .event {
       height: 300px;
-      width: 300;
+      width: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -67,14 +67,10 @@ nav li a:hover {
 }
 
 .button_for_event {
+    background-color: skyblue;
    text-align: center;
-    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
     padding: 5px 10px;
     color: #333;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
     border: 1px solid #666;
 }
@@ -127,7 +123,6 @@ h2 {
     height: 30px;
 }
 
-}
 ::placeholder {
   color: grey;
   font-size: 1em;
