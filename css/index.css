@@ -33,16 +33,78 @@ div.banner > p {
     text-align: center;
 }
 
+/*Навігаційна панель*/
 
 
-@media (min-width: 620px) {
-    header nav {
+
+.nav-logo {
     display: flex;
-    align-items: center;
-    }
+    justify-content: space-between;
+    
 }
 
+.logo {
+    margin-top: 2px; 
+}
+.menu {
+    margin-top: 8px;
+	overflow: hidden;
+	border-radius: 0px;
+	counter-reset: flag; 
+}
+
+.menu a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 22px;
+	line-height: 44px;
+	color: white;
+	padding: 0 40px 0 60px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+    
+}
+
+.menu a:first-child {
+	padding-left: 100px;
+	border-radius: 0px;
+}
+
+.menu a.active, .menu a:hover{
+	background: #333;
+	background: linear-gradient(#333, #000);
+}
+
+.menu a.active:after, .menu a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+.menu a:after {
+	position: absolute;
+	top: 0; 
+	right: -18px; 
+	width: 40px; 
+	height: 40px;
+	transform: scale(0.707) rotate(45deg);
+	z-index: 1;
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+}
+
+.flat a, .flat a:after {
+	background: white;
+	color: black;
+	transition: all 0.6s;
+}
+
+/*Головний слайдер*/
+
 header .banner {
+    margin-bottom: 10px;
     background-image: url(../img/lake.jpg);
     background-position: bottom;
     background-size: cover;
@@ -56,40 +118,6 @@ header .banner {
 header .banner h1 {
     color : var(--accent-color);
 }
-
-@media (min-width: 560px) {
-    .products {
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 820px) {
-    .products {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (min-width: 980px) {
-    .products {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-#m-logo a {
-	margin-left: 0px;
-    padding: 0;
-    width: 100px;
-    height: 70px;
-}
-
-.logo {
-    width: 105px;
-    height: 65px;
-}
-
-
 .event {
       height: 300px;
       width: 300px;
@@ -194,63 +222,4 @@ input[type=button], input[type=submit] {
     text-align: center;
 }
 
-
-.breadcrumb {
-	display: inline-block;
-	overflow: hidden;
-	border-radius: 0px;
-	counter-reset: flag; 
-}
-
-.breadcrumb a {
-	text-decoration: none;
-	outline: none;
-	display: block;
-	float: left;
-	font-size: 20px;
-	line-height: 40px;
-	color: white;
-	padding: 0 80px 0 80px;
-	background: #666;
-	background: linear-gradient(#666, #333);
-	position: relative;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-}
-
-.breadcrumb a:first-child {
-	padding-left: 100px;
-	border-radius: 0px;
-}
-
-.breadcrumb a.active, .breadcrumb a:hover{
-	background: #333;
-	background: linear-gradient(#333, #000);
-}
-
-.breadcrumb a.active:after, .breadcrumb a:hover:after {
-	background: #333;
-	background: linear-gradient(135deg, #333, #000);
-}
-
-
-.breadcrumb a:after {
-	content: '';
-	position: absolute;
-	top: 0; 
-	right: -18px; 
-	width: 36px; 
-	height: 36px;
-	transform: scale(0.707) rotate(45deg);
-	z-index: 1;
-	background: #666;
-	background: linear-gradient(135deg, #666, #333);
-}
-
-.flat a, .flat a:after {
-	background: white;
-	color: black;
-	transition: all 0.6s;
-}
 
