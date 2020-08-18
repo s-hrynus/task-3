@@ -1,59 +1,95 @@
-html,body {
-	width: 100%;
-	height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Neucha&display=swap');
+
+:root {
+    font-family: 'Neucha', sans-serif;
+    --main-color: black;
+    --accent-color : white;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1080px;
+    margin: auto;
+}
+
+h1, h2, p, div {
+    margin : 0;
+    padding: 0;
+}
+
+header .banner h1 {
+    font-family: 'Bangers', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+}
+
+div.banner > p {
+    color : var(--accent-color);
+    font-size: 1rem;
+    letter-spacing: 0.105rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+@media (min-width: 620px) {
+    header nav {
+    display: flex;
+    align-items: center;
+    }
+}
+
+header .banner {
+    background-image: url(../img/lake.jpg);
+    background-position: bottom;
+    background-size: cover;
+    min-height: 500px;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+header .banner h1 {
+    color : var(--accent-color);
+}
+
+@media (min-width: 560px) {
+    .products {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 820px) {
+    .products {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 980px) {
+    .products {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 #m-logo a {
-	margin-left: 20px;
-	float: left;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 26px;
-}
-
-.logo {
+	margin-left: 0px;
+    padding: 0;
     width: 100px;
     height: 70px;
 }
 
-nav {
-	overflow: hidden;
-	float: right;
+.logo {
+    width: 105px;
+    height: 65px;
 }
 
-nav li {
-    
-	float: left ;
-	list-style: none;
-    bottom: 200px;
-    right: 150px;
-    
-}
-nav li a {
-	font-size: 20px;
-	font-weight: bold;
-	text-decoration: none;
-	padding: 0 20px;
-	color: #143567;
-	text-shadow: 0 1px 0 white;
-}
-nav li a:hover {
-	color: #a45f93;
-}
-.el-one_flex-item {
-    font-size: 22px;
-    letter-spacing: 0.5px;
-}
-.slider-one {
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    width: 100%;
-    height: 85%;
-    top: 350px;
-    left: 0px;
-    z-index: 55;
-}
+
 .event {
       height: 300px;
       width: 300px;
@@ -61,6 +97,7 @@ nav li a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
 .button {
     text-align: center;
     margin: 0 auto;
@@ -68,7 +105,7 @@ nav li a:hover {
 
 .button_for_event {
     background-color: skyblue;
-   text-align: center;
+    text-align: center;
     padding: 5px 10px;
     color: #333;
     border-radius: 5px;
@@ -156,3 +193,64 @@ input[type=button], input[type=submit] {
 .copyright {
     text-align: center;
 }
+
+
+.breadcrumb {
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 0px;
+	counter-reset: flag; 
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 20px;
+	line-height: 40px;
+	color: white;
+	padding: 0 80px 0 80px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.breadcrumb a:first-child {
+	padding-left: 100px;
+	border-radius: 0px;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#333, #000);
+}
+
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -18px; 
+	width: 36px; 
+	height: 36px;
+	transform: scale(0.707) rotate(45deg);
+	z-index: 1;
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+}
+
+.flat a, .flat a:after {
+	background: white;
+	color: black;
+	transition: all 0.6s;
+}
+
