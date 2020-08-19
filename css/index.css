@@ -46,7 +46,19 @@ div.banner > p {
 .logo {
     margin-top: 2px; 
 }
+
+@media (min-width: 500px) {
+    .menu {
+    margin-left: 10%;
+    }
+}
+
 .menu {
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    flex-wrap: wrap;
     margin-top: 8px;
 	overflow: hidden;
 	border-radius: 0px;
@@ -54,14 +66,17 @@ div.banner > p {
 }
 
 .menu a {
+    min-width: 100px;
 	text-decoration: none;
 	outline: none;
-	display: block;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 	float: left;
+    height: 44px;
 	font-size: 22px;
 	line-height: 44px;
 	color: white;
-	padding: 0 40px 0 60px;
 	background: #666;
 	background: linear-gradient(#666, #333);
 	position: relative;
@@ -69,7 +84,6 @@ div.banner > p {
 }
 
 .menu a:first-child {
-	padding-left: 100px;
 	border-radius: 0px;
 }
 
@@ -104,11 +118,11 @@ div.banner > p {
 /*Головний слайдер*/
 
 header .banner {
+    height: calc(100vh - 67px);
     margin-bottom: 10px;
     background-image: url(../img/lake.jpg);
     background-position: bottom;
     background-size: cover;
-    min-height: 500px;
     display : flex;
     align-items: center;
     justify-content: center;
@@ -145,29 +159,58 @@ text-align: center;
 }
 
 #about {
-	font-size: 20px;
-	height:200px;
-	margin: 1px 1px 1px 1px;
-	padding: 30px;
+    text-align: center;
+    margin-top : 50px;
+    font-size: 20px;
+    height: 200px;  
+}
+
+
+@media (min-width: 500px) {
+    #rest {
+        margin-top: 180px;
+    }
+}
+
+.info {
+    margin-bottom: 80px; 
+    padding: 30px;
+    text-align: center;
 }
 
 #rest {
 	font-size: 20px;
 	height:200px;
-	margin: 1px 1px 1px 1px;
-	padding: 30px;
+    margin-top: 320px;
 }
+
+.popular {
+    text-align: center;
+    margin-top: 150px;
+}
+
+
 
 #wedding {
     font-size: 20px;
 	height:200px;
-	margin: 1px 1px 1px 1px;
-	padding: 30px;
+
 }	
 
 h2 {
     color: white;
     background-color: black; 
+}
+
+.celebrate_wedding {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width : 320px) {
+.wedding-photo {
+    margin-top: 130px;
+    }
 }
 
 .wedding-photo {
@@ -221,5 +264,3 @@ input[type=button], input[type=submit] {
 .copyright {
     text-align: center;
 }
-
-
